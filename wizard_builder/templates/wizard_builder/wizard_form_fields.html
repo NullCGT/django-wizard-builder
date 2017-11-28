@@ -5,6 +5,7 @@
         {% if forloop.counter != 1 %}more_questions{% endif %}
     ">
 
+        <p>THIS IS A TEST</p>
         {% if not field|is_multiple_choice %}
             <label id='help-{{ field.auto_id }}' class="help-block">
                 {% include "wizard_builder/wizard_form_field_info.html" %}
