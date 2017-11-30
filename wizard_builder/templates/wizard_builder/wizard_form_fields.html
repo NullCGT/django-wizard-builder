@@ -4,7 +4,7 @@
     <div class="form-group
         {% if forloop.counter != 1 %}more_questions{% endif %}
     ">
-    <p>{% form.answers_for_current_step  %}</p>
+    <p>{{ form.answers_for_current_step }}</p>
 
         {% if not field|is_multiple_choice %}
             <label id='help-{{ field.auto_id }}' class="help-block">
