@@ -4,8 +4,10 @@
     <div class="form-group
         {% if forloop.counter != 1 %}more_questions{% endif %}
     ">
-    <p>Current data from storage: {{ form.current_data_from_storage() }}</p>
-    <p>Nonexistent: {{form.nonsense()}}
+    {% cur = form.current_data_from_storage() %}
+    {% nonsense = form.nonsense() %}
+    <p>Current data from storage: {{ cur }}</p>
+    <p>Nonexistent: {{ nonsense }}
 
         {% if not field|is_multiple_choice %}
             <label id='help-{{ field.auto_id }}' class="help-block">
